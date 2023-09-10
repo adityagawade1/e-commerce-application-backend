@@ -1,0 +1,17 @@
+package com.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.entity.User;
+
+public interface UserRepository extends JpaRepository<User, Integer>{
+
+	Optional<User> findByEmail(String username);
+
+	Optional<User> findByEmailAndIsEnable(String userName,boolean isEnable);
+
+	Optional<User> findByIdAndIsEnable(int id, boolean b);
+
+}

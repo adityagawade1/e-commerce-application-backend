@@ -1,0 +1,14 @@
+package com.service;
+
+import java.util.List;
+
+import com.entity.Role;
+
+public interface RoleService {
+	
+	void saveRole();
+	
+	Role getRole(String name);
+	
+	List<Role> getRoles();
+}
